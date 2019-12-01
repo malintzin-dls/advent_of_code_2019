@@ -4,7 +4,7 @@
   "description": "Advent of Code - 2019",
   "main": "index.js",
   "scripts": {
-    "test": "yarn test"
+    "test": "yarn jest --watch"
   },
   "author": "Marina Delas",
   "license": "ISC",
