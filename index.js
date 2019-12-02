@@ -1,9 +1,16 @@
 const fs = require('fs');
+const path = require('path');
 
-const getInput = key =>
+const getLineSeparatedInput = key =>
   fs
-    .readFileSync('/Documents/Dev/AdventOfCode/2019/' + key + '/input.txt')
+    .readFileSync(path.join(__dirname) + '/' + key + '/input.txt')
     .toString()
     .split('\n');
 
-module.exports = getInput;
+const getCommaSeparatedInput = key =>
+  fs.readFileSync(path.join(__dirname) + '/' + key + '/input.txt').toString().split(',').map(Number);
+
+module.exports = {
+  getLineSeparatedInput: getLineSeparatedInput,
+  getCommaSeparatedInput: getCommaSeparatedInput,
+};

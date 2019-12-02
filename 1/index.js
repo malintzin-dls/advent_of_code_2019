@@ -1,6 +1,6 @@
 const getInput = require('../index');
 
-const input = getInput(1);
+const input = getInput.getLineSeparatedInput(1);
 
 const fn1 = arr =>
   arr.reduce((acc, val) => acc + Math.floor(Number(val) / 3) - 2, 0);
