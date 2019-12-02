@@ -10,9 +10,8 @@ const fn2 = () => {
   let accumulator = 0;
   return (recusion = arr => {
     arr.reduce((acc, val) => {
-      const necessaryFuel = Math.floor(Number(val) / 3) - 2;
-      if (necessaryFuel <= 0) return accumulator;
-      const massFuel = Math.floor(Number(val) / 3) - 2;
+      const fuel = Math.floor(Number(val) / 3) - 2;
+      if (fuel <= 0) return accumulator;
       accumulator = accumulator + massFuel;
       return recusion([massFuel]);
     }, accumulator);
