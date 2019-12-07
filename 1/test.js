@@ -1,4 +1,4 @@
-const fns = require('../index');
+const fns = require('./index');
 
 const io1 = [
   [[12], 2],

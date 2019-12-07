@@ -1,6 +1,6 @@
-const getInput = require('../index');
+const helpers = require('../index');
 
-const input = getInput.getCommaSeparatedInput(2);
+const input = helpers.getInputSeparatedBy(2, ',');
 
 const fn1 = ([...array], noun, verb) => {
   array[1] = noun;

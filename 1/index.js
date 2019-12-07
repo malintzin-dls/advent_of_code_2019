@@ -1,6 +1,6 @@
-const getInput = require('../index');
+const helpers = require('../index');
 
-const input = getInput.getLineSeparatedInput(1);
+const input = helpers.getInputSeparatedBy(1, '\n');
 
 const fn1 = arr =>
   arr.reduce((acc, val) => acc + Math.floor(Number(val) / 3) - 2, 0);
@@ -12,8 +12,8 @@ const fn2 = () => {
     arr.reduce((acc, val) => {
       const fuel = Math.floor(Number(val) / 3) - 2;
       if (fuel <= 0) return accumulator;
-      accumulator = accumulator + massFuel;
-      return recusion([massFuel]);
+      accumulator = accumulator + fuel;
+      return recusion([fuel]);
     }, accumulator);
     return accumulator;
   });
